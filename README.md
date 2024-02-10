@@ -1,0 +1,3 @@
+Inspired by a friend, who was trying to invent a soy lecithin to replace egg recipe. Leveraging on AI to control quality of production and possibility to automate with robot or even invent new receipe is highly possible.
+This project does collect survey, feedback from customer commenting about the taste of french toast. Further, allow alterable feedback, with GPT2 model to match against current french toast experimental feedback and recipe records. and display the possible outcome of latest feedback, how the frenchtoast was prepared.
+Welcome feedback and collaboration: patrick.patricktan@gmail.com
