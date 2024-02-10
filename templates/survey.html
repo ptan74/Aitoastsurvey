@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toast Evaluation Survey</title>
+  <style>
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="range"] {
+      width: 100%;
+      margin-bottom: 20px;
+      -webkit-appearance: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #007bff;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+    }
+    input[type="range"]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 10px;
+      cursor: pointer;
+      background: #ddd;
+      border-radius: 5px;
+    }
+    .scale-pointers {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #777;
+      margin-top: 5px;
+    }
+    textarea {
+      width: 50%;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+    input[type="submit"] {
+      background-color: lightblue;
+      color: black;
+      padding: 16px 32px;
+      font-size: 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Toast Evaluation Survey</h1>
+  <form action="/submit_survey" method="post">
+    <label for="texture">Texture:</label>
+    <input type="range" id="texture" name="texture" min="1" max="5" value="3" step="1">
+    <div class="scale-pointers">
+      <span>1 - Very Soft</span>
+      <span>2 - Soft</span>
+      <span>3 - Moderate</span>
+      <span>4 - Hard</span>
+      <span>5 - Very Hard</span>
+    </div>
+
+    <label for="crispiness">Crispiness:</label>
+    <input type="range" id="crispiness" name="crispiness" min="1" max="5" value="3" step="1">
+    <div class="scale-pointers">
+      <span>1 - Not Crispy</span>
+      <span>2 - Slightly Crispy</span>
+      <span>3 - Moderate</span>
+      <span>4 - Crispy</span>
+      <span>5 - Very Crispy</span>
+    </div>
+
+    <label for="taste">Taste:</label>
+    <input type="range" id="taste" name="taste" min="1" max="5" value="3" step="1">
+    <div class="scale-pointers">
+      <span>1 - Unpleasant</span>
+      <span>2 - Not Good</span>
+      <span>3 - Okay</span>
+      <span>4 - Good</span>
+      <span>5 - Delicious</span>
+    </div>
+
+    <label for="visual">Visual Presentation (Describe):</label>
+    <textarea id="visual" name="visual" placeholder="Describe the visual appeal and presentation of the toast..."></textarea>
+
+    <label for="satisfaction">Overall Satisfaction:</label>
+    <textarea id="satisfaction" name="satisfaction" placeholder="Provide overall feedback on your experience with the toast..."></textarea>
+
+      <p></p>
+      <p></p>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

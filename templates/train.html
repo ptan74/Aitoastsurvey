@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Results</title>
+</head>
+<body>
+    <h1>Training Results</h1>
+    <h2>Accuracy: {{ accuracy }}</h2>
+    <h2>Records Processed During Training:</h2>
+    {{ records | safe }}
+    <h2>Training Loss and Accuracy Plot:</h2>
+    <img src="/static/training_plot.png" alt="Training Plot" width="800">
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Sentiment Analysis</title>
+
+</head>
+<body>
+    <h1>Feedback Sentiment Analysis</h1>
+    <form action="/ask" method="post">
+        <textarea name="feedback" rows="10" cols="50">The bread is hard, and crispy. The taste is delicious and I like how it was displayed.</textarea><br><br>
+        <input type="submit" value="Ask me" style="background-color: blue; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+        <p></p>
+    </form>
+    {% if result %}
+        <textarea rows="10" cols="100" readonly>{{ result }}</textarea>
+    {% endif %}
+    {% if matched_records %}
+        <h2 style="color: red;">Recipes:</h2>
+        <ul>
+        {% for record in matched_records %}
+            <li>
+                {% for key, value in record.items() %}
+                    <span style="color: red;">{{ key }}:</span> <span style="color: black;">{{ value }}</span><br>
+                {% endfor %}
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
